@@ -15,7 +15,7 @@ class Counter extends React.Component {
     // }
 
     handleIncrement = (product) =>{
-        console.log(product);
+      
        this.setState({ count: this.state.count + 1 })
 
     };
@@ -34,7 +34,7 @@ class Counter extends React.Component {
         return <div>
             {/* <img src={ this.state.imageUrl } alt=" " /> */}
             <span style={ { fontSize: 20 } } className={ this.getBadgeClasses() }>{this.formatCount()}</span>
-            <button onClick={() => this.handleIncrement(product)} className="btn btn-secondary btn-sm">Increment</button>
+            <button onClick={ () => this.handleIncrement({ id: 1}) } className="btn btn-secondary btn-sm">Increment</button>
             { this.state.tags.length === 0 && 'Please create a new tag!' }
             { this.renderTags() }
 
